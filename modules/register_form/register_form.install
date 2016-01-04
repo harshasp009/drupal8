@@ -1,0 +1,30 @@
+<?php
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ *
+ * @see hook_schema()
+ * @ingroup register_form
+ */
+function register_form_schema() {
+  $schema['register_form'] = array(
+    'description' => '',
+    'fields' => array(
+      'pid' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique registration ID.',
+      ),
+      'phone_no' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Phone Number',
+      ),
+    ),
+    'primary key' => array('pid'),
+  );
+  return $schema;
+}

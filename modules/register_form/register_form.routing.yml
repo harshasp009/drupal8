@@ -1,0 +1,17 @@
+register_form.form:
+  path: '/register_form'
+  defaults:
+   #_controller: '\Drupal\register_form\Controller\RegisterFormController::menu'
+   _form: '\Drupal\register_form\Form\RegisterForm'
+   _title: 'Register Form'
+  requirements:
+    _permission: 'access content'
+
+register_form_list:
+  path: '/viewdata'
+  defaults:
+   _controller: '\Drupal\register_form\Controller\RegisterFormController::viewData'
+   #_form: '\Drupal\register_form\Form\RegisterForm::viewData'
+   _title: 'View data'
+  requirements:
+    _permission: 'access content'

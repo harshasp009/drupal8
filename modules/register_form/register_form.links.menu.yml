@@ -1,0 +1,7 @@
+register_form.form:
+  title: Register Form
+  route_name: register_form.form
+
+register_form.list:
+  title: View Data
+  route_name: register_form_list
